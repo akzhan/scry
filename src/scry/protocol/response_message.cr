@@ -23,7 +23,6 @@ module Scry
     end
 
     def initialize(ex : Exception)
-      @id = 0
       @error = ResponseError.new(
         ex.message || "Unknown error",
         ex.backtrace
