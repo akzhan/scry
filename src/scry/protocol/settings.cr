@@ -9,7 +9,7 @@ module Scry
   struct Settings
     JSON.mapping({
       crystal_config: {type: Customizations, key: "crystal-lang"},
-    }, true)
+    })
   end
 
   # Replace mappings to match your client config,
@@ -17,9 +17,9 @@ module Scry
   #
   # Currently configured for vscode-crystal-lang
   struct Customizations
-    JSON.mapping(
+    JSON.mapping({
       max_number_of_problems: {type: Int32, key: "maxNumberOfProblems"},
-      log_level: {type: String, key: "logLevel"}
-    )
+      log_level:              {type: String, key: "logLevel"},
+    })
   end
 end
